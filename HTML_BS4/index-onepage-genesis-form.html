@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Genesis-project-Ali MIJIYAWA</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<style>      
+		  
+		  label{
+			 
+			font-size: 11px;
+
+		  }
+
+		  .mes_bout{
+			
+			background-color: yellowgreen;
+
+		  }
+
+		 div{
+			font-size: 12px;
+		  }
+
+		  form {
+ 			 width: 1000px;
+			  height:2500;
+				
+			}
+
+
+		
+		</style>
+
+
+
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation body">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY Rocket Elevator?</h6>
+						<p> </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i>  </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> </a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b>  <br /> 4468 Rue Wellington, Suite 204, Verdun, Québec, H4G 1W5, Montreal-Quebec</li>
+							<li><b>Phone:</b> 581-701-0303</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">info@codeboxx.biz</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div style = "background-color: darkred;"  id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="/Users/alimiji/Desktop/GenesisProgram-master/Rocket Elevator Assets/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- WORK -->
+										<a href="#work">
+											Portfolio
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											Clients
+										</a>
+									</li>
+									
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+  
+<!--Header -->
+
+
+<!-- CONTACT -->
+<section style = "background: blue;"  id="contact">
+	<div class="container">
+
+		<header class="text-center mb-60">
+			<h2 id = "contact" style="color:#fff">	Welcome in our subcription form !</h2>
+			
+			<hr />
+		</header>
+
+
+		<div class="row">
+
+			<!-- FORM -->
+			<div class="col-md-8 col-sm-8">
+
+				
+
+				
+				<!--
+					MESSAGES
+					
+						How it works?
+						The form data is posted to php/contact.php where the fields are verified!
+						php.contact.php will redirect back here and will add a hash to the end of the URL:
+							#alert_success 		= email sent
+							#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+							#alert_mandatory	= email not sent - required fields empty
+							Hashes are handled by assets/js/contact.js
+
+						Form data: required to be an array. Example:
+							contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+							Also, add `required` to input fields if is a mandatory field. 
+							Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+						PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+									 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+						WARNING! Do not change the `email` and `name`!
+									contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+									contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+				-->
+
+				<!-- Alert Success -->
+				<div style = "color: black;" id="alert_success" class="alert alert-success mb-30">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Thank You!</strong> Your message successfully sent!
+				</div><!-- /Alert Success -->
+
+
+				<!-- Alert Failed -->
+				<div style = "color: black;" id="alert_failed" class="alert alert-danger mb-30">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>[SMTP] Error!</strong> Internal server error!
+				</div><!-- /Alert Failed -->
+
+
+				<!-- Alert Mandatory -->
+				<div style = "color: black;" id="alert_mandatory" class="alert alert-danger mb-30">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+				</div><!-- /Alert Mandatory -->
+
+
+				<form action="php/contact.php" method="post" enctype="multipart/form-data">
+
+
+					<fieldset>
+						   <input type="hidden" name="action" value="contact_send" />
+
+                        
+							<div class="row">
+								<label for="contact_department">Type of residence</label>
+								<select class="form-control pointer" name="select" id = "select">
+									<option value="choosing">--- Please choose your building's type please ---</option>
+									<option value="Residential">Residential</option>
+									<option value="Commercial">Commercial</option>
+									<option value="Corporative">Corporative</option>
+									<option value="Hybride">Hybride</option>
+								</select>
+							</div>
+					
+
+
+
+
+
+
+
+						 
+						
+					
+                         <!-- ligne 2-->
+
+
+						<div style = "color: black;" class="row">
+
+							<div id = "nbBld_appart" class="col-md-4 form-group">
+							<label id="cell21_label"  for="">Number of building appartement </label>
+							<input required type="number" value= 0  name="" id="nbBld_Appart" >
+						    </div>
+                                  
+
+							   <div id = "nbBld_stairs" class="col-md-4 form-group">
+									<label id="cell22_label"  for="">Number of building stairs</label>
+									<input required type="number" value= 0 class="" name="" id="nbBld_Stairs">
+								</div>
+								<div id = "nbBld_basements" class="col-md-4 form-group">
+									<label id="cell23_basement" for="">Number of building basements</label>
+									<input required type="number" value= 0 class="" name="" id="nbBld_Basements" >
+								</div>
+								
+						</div>
+					  <!-- /ligne 2 -->
+					   
+					  
+                         <!-- ligne 3-->
+
+
+						<div style = "color: black;" class="row">
+
+							<div id = "nbS_trade" class="col-md-4 form-group">
+							<label id="cell31_label" for="">Number of separate trade</label>
+							<input required type="number" value=0 class="" name="" id="nbS_Trade" >
+						    </div>
+                                  
+
+							   <div id = "nbP_savailable" class="col-md-4 form-group">
+									<label  id="cell32_label" for="">Number of parking spaces available</label>
+									<input required type="number" value= 0 class="" name="" id="nbP_Savailable" >
+								</div>
+								<div  id = "nbEl_shafts" class="col-md-4 form-group">
+									<label  id="cell33_label" for="">Number of elevator shafts</label>
+									<input required type="number" value= 0 class="" name="" id="nbEl_Shafts" >
+								</div>
+								
+						</div>
+					  <!-- /ligne 3 -->
+					   
+					<!-- ligne 4-->
+
+
+						 <div style = "color: black;" class="row">
+
+							<div id = "nbS_tenantBusines" class="col-md-4 form-group">
+							<label id="cell41_label" for="">number of separate tenant businesses</label>
+							<input required type="number" value= 0 class="" name="" id="nbS_TenantBusines" >
+						    </div>
+                                  
+
+							   <div id = "nbM_occupant" class="col-md-4 form-group">
+									<label  id="cell42_label" for="">maximum number of occupants</label>
+									<input required type="number" value= 0 class="" name="" id="nbM_Occupant" >
+								</div>
+								<div id = "nbH_activity" class="col-md-4 form-group">
+									<label  id="cell43_label" for="">number of hours of activity</label>
+									<input required type="nummber" value= 0 class="" name="" id="nbH_Activity">
+								</div>
+								
+						</div>
+					  <!-- /ligne 4 -->
+					 
+
+					  <div class="col-md-4 form-group">
+						<label id = "recomend_number_label" for="">
+						
+							Recommended number of elevator</label>
+							<div  id="recomend_elvtr" for=""> 0 </div>
+					
+					</div>
+					  
+
+
+
+                       <!-- ligne 5-->
+
+
+						<br style = "color: black;" class="row">
+
+							  
+					    <div>
+						 
+						
+						<p> Select the range of elevator  </p>
+	                    </div>
+							<div>
+
+								<p> <input id="radio_Standard" type="radio" name="choix1" value="Standard"> Standard </p>
+								  
+							</div>
+										</br>
+							<div>
+								<p> <input id="radio_Premium" type="radio" name="choix1" value="Premium"> Premium </p>
+									  
+							</div>
+								
+										</br>
+							
+							<div>
+								<p> <input id="radio_Excelium" type="radio" name="choix1" value="Excelium"> Excelium </p>
+								
+							  </div>
+									  
+										</br>
+							  
+						
+                                  
+
+							   <div class="col-md-4">
+									<label for=""></label>
+									
+								</div>
+								
+								
+					  <!-- /ligne 5 -->
+
+
+
+					
+
+
+					    <!-- ligne 6 -->
+
+					  <div style = "color: black;" class="row">
+
+						<div class="col-md-4 ">
+							<label id="Unit_price_label" for=""> Unit price
+							
+								 <div id="Unit_price" > 0 </div>
+							</div>
+
+						<div class="col-md-4 ">
+						<label id="c_instal_label" for=""> Cost of installation </label>
+						<div id="c_instal" > 0 </div>
+						</div>
+							  
+						 
+
+						   <div class="col-md-4 ">
+								<label id="tc_elvtr_label" for="">Total cost of elevator shafts</label>
+								<div id="tc_elvtr" > 0 </div>
+							</div>
+							
+							<div class="col-md-4">
+								<label for="">
+				
+							  </div>
+
+					  </div>	
+
+
+
+
+
+
+
+
+					<div style = "color: black;" class="row">
+
+						<div class="col-md-4 form-group">
+						<label id="tc_instalHT_label" for= "" >Total cost  </label>
+						<div id="tc"  > 0 </div>
+						</div>
+							  
+                        <!--
+						   <div class="col-md-4 form-group">
+								<label id=" tc_installTTC_label" for="">Total cost of installation(TTC)</label>
+								<div id="tc_installTTC"  > 0 </div>
+							</div>
+
+						-->
+				   </div>
+							
+							  
+				   
+						
+				
+
+
+
+						
+		
+						
+
+					</fieldset>
+
+					
+					
+				</form>
+
+			</div>
+			<!-- /FORM -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h2 class="letter-spacing-1">WHY US?</h2>
+
+							<!-- Small Description -->
+							<p>
+								
+							</p>
+							<h2>581-701-0303</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h2 class="letter-spacing-1">KEEP IN TOUCH</h2>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+
+		
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+        <script src = "https://maps.googleapis.com/maps/api/js."></script>
+		
+
+
+<script>
+		  // let standardUnitPrice = 7565;
+		// let installCostStd = standardUnitPrice - (standardUnitPrice * 0.1);
+		// let premiumUnitPrice = 12345;
+		// let installCostPrem = premiumUnitPrice - (premiumUnitPrice * 0.13);
+		// let exceliumUnitPrice = 7565;
+		// let installCostExcel = exceliumUnitPrice - (exceliumUnitPrice * 0.16);
+		var Std_Uprice = 7565.00;
+		
+		var Premium_Uprice = 12345.00;
+		
+		var Excelium_Uprice = 15400.00;
+
+		
+
+		$(document).ready(function(){
+			alert("all good");
+			 $('#select').change(function(){   /*start function change*/
+			let optionSelected = $("#select option:selected").val();
+ 
+			switch (optionSelected) {/*start switch*/
+
+				case 'Residential':
+					/* Clearing all input value*/
+					$(function(){
+						$('input[type=number]').each(function(){
+							$(this).val('');
+						});
+					});
+					$('#nbS_trade').hide();
+					$('#nbBld_stairs').show();
+					$('#nbBld_basements').show();
+					$('#nbP_Savailable').hide();
+					$('#nbM_occupant').hide();
+					$('#nbBld_appart').show();
+					$('#nbEl_shafts').hide();
+					$('#nbS_tenantBusines').hide();
+					$('#nbH_activity').hide();
+
+					if( $('#nbBld_Stairs').val() <= 20 ){
+
+					  var TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 );
+
+						$('#recomend_elvtr').text("$"+TotalElvtr_shaft);
+
+					}else{
+
+						TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 )* Math.ceil($('#nbBld_stairs').val()/20);
+
+						$('#recomend_elvtr').text(TotalElvtr_shaft);
+
+
+					}
+
+
+
+
+					$('#radio_Standard').click(function(){
+
+					   var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+					   var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+					   var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+						
+
+						$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Premium').click(function(){
+
+						
+					    var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+					    var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+					    var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+						
+                       
+
+						$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Excelium').click(function(){
+
+						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+						var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+						
+
+						$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+
+						});
+
+
+						
+
+					
+					
+					break;
+
+					 case 'Commercial':
+
+					/* Clearing all input value*/
+					$(function(){
+							$('input[type=number]').each(function(){
+								$(this).val('');
+							});
+						});
+
+						$('#nbS_Trade').hide();
+					$('#nbBld_stairs').show();
+					$('#nbBld_basements').show();
+					$('#nbP_Savailable').show();
+					$('#nbM_occupant').hide();
+					$('#nbBld_appart').hide();
+					$('#nbEl_shafts').show();
+					$('#nbS_tenantBusines').show();
+					$('#nbH_activity').hide();
+					
+					
+					
+					var TotalElvtr_shaft = $('#nbEl_Shafts').val();
+
+					$('#recomend_elvtr').text(TotalElvtr_shaft);
+						
+						
+						
+					$('#radio_Standard').click(function(){
+
+						var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+						var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+						var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+						
+
+						$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Premium').click(function(){
+
+						
+						var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+						var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+						var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+						
+
+
+						$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Excelium').click(function(){
+
+						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+						var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+						
+
+						$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+						
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+
+						});
+
+
+												
+					
+
+					     	break;
+
+					case 'Corporative':
+					/* Clearing all input value*/
+					$(function(){
+						$('input[type=number]').each(function(){
+							$(this).val('');
+						});
+					});
+
+					$('#nbS_Trad').show();
+					$('#nbBld_stairs').show();
+					$('#nbBld_basements').show();
+					$('#nbP_savailable').show();
+					$('#nbM_occupant').show();
+					$('#nbBld_appart').hide();
+					$('#nbEl_shafts').hide();
+					$('#nbS_tenantBusines').hide();
+					$('#nbH_activity').hide();
+					
+					
+					 var TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
+
+						$('#recomend_elvtr').text(TotalElvtr_shaft);
+											
+
+						$('#radio_Standard').click(function(){
+
+						var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+						var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+						var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+
+
+						$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Premium').click(function(){
+
+
+						var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+						var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+						var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+
+
+
+						$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+						});
+
+						$('#radio_Excelium').click(function(){
+
+						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+						var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+
+
+						$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+
+						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+
+						});
+																
+                     	break;
+
+				case 'Hybride':
+					/* Clearing all input value*/
+					$(function(){
+						$('input[type=number]').each(function(){
+							$(this).val('');
+						});
+					});
+
+					$('#nbS_Trad').hide();
+					$('#nbBld_stairs').show();
+					$('#nbBld_basements').show();
+					$('#nbP_savailable').show();
+					$('#nbM_occupant').show();
+					$('#nbBld_appart').hide();
+					$('#nbEl_shafts').hide();
+					$('#nbS_tenantBusines').hide();
+					$('#nbH_activity').show();
+					
+					
+					TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
+
+					$('#recomend_elvtr').text(TotalElvtr_shaft);
+	
+
+
+
+
+					$('#radio_Standard').click(function(){
+
+					var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+					var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+					var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+
+
+					$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+
+					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+					});
+
+					$('#radio_Premium').click(function(){
+
+
+					var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+					var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+					var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+
+
+
+					$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+
+					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+					});
+
+					$('#radio_Excelium').click(function(){
+
+					var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+					var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+					var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+
+
+					$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+
+					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+
+
+					});
+
+					
+					break;
+
+					default:
+
+			}/*end switch*/
+
+		});
+    
+        
+	});
+
+
+
+
+
+
+
+
+
+
+			
+
+		</script>
+	</body>
+</html>
