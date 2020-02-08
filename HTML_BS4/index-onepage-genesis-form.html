@@ -28,7 +28,16 @@
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
 
-		<style>      
+		<style>  
+		
+		
+		#btn{
+
+		  text-align: right;
+		  background-color: blueviolet;
+		  color:red;
+
+		}
 		  
 		  label{
 			 
@@ -436,6 +445,12 @@
 								<p> <input id="radio_Excelium" type="radio" name="choix1" value="Excelium"> Excelium </p>
 								
 							  </div>
+
+							   <div  id = "btn" style = "color: black;" class="row">
+
+								<input id = "calcul" class="favorite styled"  type = " button " value="CALCUL">
+						 
+								</div>
 									  
 										</br>
 							  
@@ -452,6 +467,7 @@
 
 
 
+					  
 					
 
 
@@ -692,25 +708,36 @@
 					$('#nbS_tenantBusines').hide();
 					$('#nbH_activity').hide();
 
-					if( $('#nbBld_Stairs').val() <= 20 ){
+					
 
-					  var TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 );
-
-						$('#recomend_elvtr').text("$"+TotalElvtr_shaft);
-
-					}else{
-
-						TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 )* Math.ceil($('#nbBld_stairs').val()/20);
-
-						$('#recomend_elvtr').text(TotalElvtr_shaft);
-
-
-					}
+					
 
 
 
 
-					$('#radio_Standard').click(function(){
+					$('#btn').click(function(){
+
+						if( $('#nbBld_Stairs').val() <= 20 ){
+
+								var TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 );
+
+								$('#recomend_elvtr').text("$"+TotalElvtr_shaft);
+
+								}else{
+
+								TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 )* Math.ceil($('#nbBld_stairs').val()/20);
+
+								$('#recomend_elvtr').text(TotalElvtr_shaft);
+
+
+								}
+
+						var result = $('input[type = "radio"]:checked').val();
+
+
+						switch (result) {/*start switch*/
+
+						case 'Standard':
 
 					   var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
 					   var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
@@ -721,11 +748,12 @@
 						
 						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
 						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
 
-						});
-
-						$('#radio_Premium').click(function(){
+						break;
+						
+						case 'Premium':
+						
 
 						
 					    var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
@@ -738,11 +766,15 @@
 						
 						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
 						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
 
-						});
+							
+						break;
+						
+						case 'Excelium':
+						
 
-						$('#radio_Excelium').click(function(){
+						
 
 						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
 						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
@@ -753,17 +785,21 @@
 						
 						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
 						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+						$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
 
+							break;
 
-						});
+							default:
 
+							}	
 
+						} ); /* End switch Residential */
+
+					
 						
-
-					
-					
 					break;
+
+
 
 					 case 'Commercial':
 
@@ -774,7 +810,7 @@
 							});
 						});
 
-						$('#nbS_Trade').hide();
+					$('#nbS_Trade').hide();
 					$('#nbBld_stairs').show();
 					$('#nbBld_basements').show();
 					$('#nbP_Savailable').show();
@@ -786,67 +822,78 @@
 					
 					
 					
-					var TotalElvtr_shaft = $('#nbEl_Shafts').val();
-
-					$('#recomend_elvtr').text(TotalElvtr_shaft);
 						
-						
-						
-					$('#radio_Standard').click(function(){
+					$('#btn').click(function(){
 
-						var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
-						var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
-						var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
-						
+					 var TotalElvtr_shaft = $('#nbEl_Shafts').val();
 
-						$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
-						
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+					 $('#recomend_elvtr').text(TotalElvtr_shaft);
+									
 
-						});
-
-						$('#radio_Premium').click(function(){
-
-						
-						var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
-						var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
-						var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
-						
+					 var result = $('input[type = "radio"]:checked').val();
 
 
-						$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
-						
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+					switch (result) {/*start switch*/
 
-						});
+								case 'Standard':
 
-						$('#radio_Excelium').click(function(){
-
-						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
-						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
-						var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
-						
-
-						$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
-						
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+								var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+								var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+								var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
 
 
-						});
+								$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+
+								$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+								$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+								$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+								break;
+
+								case 'Premium':
 
 
-												
-					
 
-					     	break;
+								var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+								var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+								var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
 
-					case 'Corporative':
+
+
+								$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+
+								$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+								$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+								$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+									
+								break;
+
+								case 'Excelium':
+
+								var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+								var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+								var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+
+
+								$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+
+								$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+								$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+								$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+									break;
+
+									default:
+
+										}	
+
+
+								} );  /* End switch commercial */
+
+									break;
+
+							case 'Corporative':
 					/* Clearing all input value*/
 					$(function(){
 						$('input[type=number]').each(function(){
@@ -865,62 +912,76 @@
 					$('#nbH_activity').hide();
 					
 					
-					 var TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
+						
+					$('#btn').click(function(){
 
-						$('#recomend_elvtr').text(TotalElvtr_shaft);
-											
+						TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
 
-						$('#radio_Standard').click(function(){
+					$('#recomend_elvtr').text(TotalElvtr_shaft);
 
-						var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
-						var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
-						var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+					var result = $('input[type = "radio"]:checked').val();
 
+					switch (result) {/*start switch*/
 
-						$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+							case 'Standard':
 
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
-
-						});
-
-						$('#radio_Premium').click(function(){
+							var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+							var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+							var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
 
 
-						var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
-						var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
-						var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+							$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+							break;
+
+							case 'Premium':
 
 
 
-						$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
-
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
-
-						});
-
-						$('#radio_Excelium').click(function(){
-
-						var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
-						var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
-						var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
+							var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+							var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+							var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
 
 
-						$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
 
-						$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-						$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-						$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+							$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+								
+							break;
+
+							case 'Excelium':
+
+							var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+							var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+							var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
 
 
-						});
-																
+							$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
+
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+								break;
+
+								default:	
+
+								}
+
+
+							} );   /* End switch commercial */
+																					
                      	break;
 
-				case 'Hybride':
+						 case 'Hybride':
 					/* Clearing all input value*/
 					$(function(){
 						$('input[type=number]').each(function(){
@@ -928,7 +989,7 @@
 						});
 					});
 
-					$('#nbS_Trad').hide();
+					$('#nbS_Trad').show();
 					$('#nbBld_stairs').show();
 					$('#nbBld_basements').show();
 					$('#nbP_savailable').show();
@@ -936,69 +997,76 @@
 					$('#nbBld_appart').hide();
 					$('#nbEl_shafts').hide();
 					$('#nbS_tenantBusines').hide();
-					$('#nbH_activity').show();
+					$('#nbH_activity').hide();
 					
 					
-					TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
+						
+					$('#btn').click(function(){
+
+						TotalElvtr_shaft = ($('#nbM_Occupant').val())/(50 * $('#nbBld_Stairs').val());
 
 					$('#recomend_elvtr').text(TotalElvtr_shaft);
-	
+
+					var result = $('input[type = "radio"]:checked').val();
+
+					switch (result) {/*start switch*/
+
+							case 'Standard':
+							var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
+							var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
+							var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+
+
+							$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
+
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
+
+							break;
+
+							case 'Premium':
+
+
+							var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
+							var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
+							var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
 
 
 
+							$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
 
-					$('#radio_Standard').click(function(){
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
 
-					var   TotalCost_ElvtrShaft = Std_Uprice * TotalElvtr_shaft;
-					var	TotalCost =  Std_Uprice * TotalElvtr_shaft * 1.1;
-					var   TotalCost_instal = Std_Uprice  * TotalElvtr_shaft * 0.1;
+								
+							break;
 
+							case 'Excelium':
 
-					$('#Unit_price').text("$ " + (parseFloat(Std_Uprice )).toFixed(2));
-
-					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
-
-					});
-
-					$('#radio_Premium').click(function(){
+							var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
+							var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
+							var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
 
 
-					var	TotalCost_ElvtrShaft = Premium_Uprice  * TotalElvtr_shaft;
-					var	TotalCost =  Premium_Uprice * TotalElvtr_shaft * 1.13;
-					var TotalCost_instal = Premium_Uprice * TotalElvtr_shaft * 0.13;
+							$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
 
+							$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
+							$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
+							$('#tc').text("$ " + parseFloat(TotalCost_ElvtrShaft + TotalCost_instal).toFixed(2));
 
+								break;
 
-					$('#Unit_price').text("$ " + (parseFloat(Premium_Uprice)).toFixed(2));
+								default:	
 
-					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
+							}  /* End switch Hybride */
 
-					});
-
-					$('#radio_Excelium').click(function(){
-
-					var	TotalCost_ElvtrShaft = Excelium_Uprice  * TotalElvtr_shaft;
-					var TotalCost  = Excelium_Uprice * TotalElvtr_shaft * 1.16;
-					var TotalCost_instal = Excelium_Uprice * TotalElvtr_shaft * 0.16;
-
-
-					$('#Unit_price').text("$ " + (parseFloat(Excelium_Uprice)).toFixed(2));
-
-					$('#c_instal').text("$ " + parseFloat(TotalCost_instal).toFixed(2));
-					$('#tc_elvtr').text("$ " + parseFloat(TotalCost_ElvtrShaft).toFixed(2));
-					$('#tc').text("$ " + parseFloat(TotalCost).toFixed(2));
-
-
-					});
-
+								} ); 
 					
-					break;
+							break;
 
-					default:
+							default:
 
 			}/*end switch*/
 
