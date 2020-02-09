@@ -452,12 +452,14 @@
 						 
 								</div>
 									  
-										</br>
+
+								</br>
 							  
 						
                                   
 
 							   <div class="col-md-4">
+
 									<label for=""></label>
 									
 								</div>
@@ -717,17 +719,27 @@
 
 					$('#btn').click(function(){
 
-						if( $('#nbBld_Stairs').val() <= 20 ){
+						var prop = $('#nbBld_Stairs').val() <= 20;
 
-								var TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 );
+						switch (prop){
 
-								$('#recomend_elvtr').text("$"+TotalElvtr_shaft);
+							case  'true':
 
-								}else{
-
-								TotalElvtr_shaft = Math.round($('#nbBld_Appart').val()/6 )* Math.ceil($('#nbBld_stairs').val()/20);
+								var TotalElvtr_shaft = Math.round(parseInt($('#nbBld_Appart').val())/6 );
 
 								$('#recomend_elvtr').text(TotalElvtr_shaft);
+
+								break;
+
+							case  'false':
+
+								TotalElvtr_shaft = (parseInt($('#nbBld_Appart').val())/6 )* ((parseInt($('#nbBld_stairs').val())/20));
+
+								$('#recomend_elvtr').text(TotalElvtr_shaft);
+
+								break;
+
+								default:
 
 
 								}
@@ -997,7 +1009,7 @@
 					$('#nbBld_appart').hide();
 					$('#nbEl_shafts').hide();
 					$('#nbS_tenantBusines').hide();
-					$('#nbH_activity').hide();
+					$('#nbH_activity').show();
 					
 					
 						
